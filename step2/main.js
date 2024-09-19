@@ -6,7 +6,7 @@ function stopWatch(options) {
   displayElm.style.color = color;
   displayElm.style.backgroundColor = backgroundColor;
 
-  function addMessage(message) {
+  const addMessage = (message) => {
     const messageElm = document.createElement("div");
     const now = new Date();
     messageElm.innerText = 
@@ -19,7 +19,7 @@ function stopWatch(options) {
   let timer = null;
 
   const startButton = document.getElementsByClassName("startButton")[0];
-  startButton.addEventListener("click", function() {
+  startButton.addEventListener("click", () => {
     if (timer === null) {
       let seconds = 0;
       displayElm.innerText = seconds;
@@ -35,7 +35,7 @@ function stopWatch(options) {
   });
   
   const stopButton = document.getElementsByClassName("stopButton")[0];
-  stopButton.addEventListener("click", function() {
+  stopButton.addEventListener("click", () => {
     if (timer !== null) {
       clearInterval(timer);
       timer = null;

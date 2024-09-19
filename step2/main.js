@@ -1,11 +1,4 @@
-function stopWatch(options) {
-  options = options || {};
-  const color = options.color || "lightblue";
-  const backgroundColor = options.backgroundColor || "black";
-  const displayElm = document.getElementsByClassName("display")[0];
-  displayElm.style.color = color;
-  displayElm.style.backgroundColor = backgroundColor;
-
+function stopWatch(options = {}) {
   const addMessage = (message) => {
     const messageElm = document.createElement("div");
     const now = new Date();
@@ -14,6 +7,15 @@ function stopWatch(options) {
     messageElm.classList = ["message"];
     logElm.appendChild(messageElm);
   }
+
+  let {color, backgroundColor} = options;
+  
+  color = color || "lightblue";
+  backgroundColor = backgroundColor || "black";
+  
+  const displayElm = document.getElementsByClassName("display")[0];
+  displayElm.style.color = color;
+  displayElm.style.backgroundColor = backgroundColor;
   
   const logElm = document.querySelector(".log");
   let timer = null;

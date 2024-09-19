@@ -24,6 +24,8 @@ function stopWatch(options) {
   startButton.addEventListener("click", function() {
     if (timer === null) {
       var seconds = 0;
+      displayElm.innerText = seconds;
+
       timer = 
         setInterval(function() {
           seconds++;

@@ -43,6 +43,12 @@ window.addEventListener("load", () => {
   console.log(colorsObj["red"]);
   console.log(colorsObj.red);
   console.log(colorsObj.blue);
+
+  colorsObj["red"] = "レッド";
+  console.log(colorsObj.red);
+
+  colorsObj.blue = "ブルー";
+  console.log(colorsObj.blue);
 });
 
 

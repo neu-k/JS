@@ -10,10 +10,7 @@ function stopWatch(options) {
     const messageElm = document.createElement("div");
     const now = new Date();
     messageElm.innerText = 
-      now.getHours() + "時" + 
-      now.getMinutes() + "分" + 
-      now.getSeconds() + "秒" + 
-      message;
+      `${now.getHours()}時${now.getMinutes()}分${now.getSeconds()}秒 ${message}`
     messageElm.classList = ["message"];
     logElm.appendChild(messageElm);
   }
